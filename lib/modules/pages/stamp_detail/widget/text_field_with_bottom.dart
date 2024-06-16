@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:jiitak_ui_assignment/common_widgets/custom_text_widget.dart';
 
 
 class CustomTextFieldWithBottomBorder extends StatelessWidget {
@@ -59,9 +60,9 @@ class CustomTextFieldWithBottomBorder extends StatelessWidget {
       children: [
         headingText == null
             ? const SizedBox()
-            : Text(
+            : CustomText(
           headingText!,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 15,
             color: Colors.black,
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:jiitak_ui_assignment/common_widgets/custom_text_widget.dart';
 
 class TopBar extends StatelessWidget {
   const TopBar({
@@ -9,8 +10,8 @@ class TopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
-      decoration: BoxDecoration(
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
+      decoration: const BoxDecoration(
           border: Border(
               bottom: BorderSide(
                 color: Color(0xffE8E8E8),
@@ -19,17 +20,18 @@ class TopBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CircleAvatar(
-            backgroundColor: Color(0xff8C817B).withOpacity(0.10),
+            backgroundColor: const Color(0xff8C817B).withOpacity(0.10),
             child: SvgPicture.asset(
               "assets/images/icon.svg",
               fit: BoxFit.cover,
             ),
           ),
-          Text(
+          CustomText(
             "店舗プロフィール編集",
-            style: TextStyle(
+            style: const TextStyle(
               color: Color(0xff4B4948),
               fontSize: 15,
+              fontWeight: FontWeight.w500,
             ),
           ),
           Stack(
@@ -37,7 +39,7 @@ class TopBar extends StatelessWidget {
               IconButton(
                   onPressed: () {},
                   icon: SvgPicture.asset(
-                    color: Color(0xff4B4948),
+                    color: const Color(0xff4B4948),
                     "assets/images/notification.svg",
                     fit: BoxFit.cover,
                   )),
@@ -46,10 +48,12 @@ class TopBar extends StatelessWidget {
                   top: 10,
                   child: CircleAvatar(
                     radius: 7,
-                    backgroundColor: Color(0xffEE7D42),
-                    child: Text(
+                    backgroundColor: const Color(0xffEE7D42),
+                    child: CustomText(
                       "99+",
-                      style: TextStyle(
+                      style: const TextStyle(
+                        color: Color(0xffFFFFFF),
+                        fontWeight: FontWeight.w500,
                         fontSize: 6.95,
                       ),
                     ),

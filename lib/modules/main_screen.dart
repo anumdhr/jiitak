@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jiitak_ui_assignment/common_widgets/custom_text_widget.dart';
 import 'package:jiitak_ui_assignment/modules/pages/home_page/home_screen.dart';
 import 'package:jiitak_ui_assignment/modules/pages/profile/profile.dart';
 import 'package:jiitak_ui_assignment/utils/customized_sized_box.dart';
@@ -19,7 +20,7 @@ class MainScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text('Main Screen',
+              CustomText('Main Screen',
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
@@ -75,7 +76,7 @@ class CommonNavigateButton extends StatelessWidget {
           color: Color(0xffa8b1ff),
           borderRadius: BorderRadius.circular(10),
         ),
-        child: Text(buttonText),
+        child: CustomText(buttonText),
       ),
     );
   }

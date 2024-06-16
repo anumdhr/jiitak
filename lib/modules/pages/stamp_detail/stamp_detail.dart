@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jiitak_ui_assignment/common_widgets/custom_text_widget.dart';
 import 'package:jiitak_ui_assignment/modules/pages/stamp_detail/widget/text_field_with_bottom.dart';
 import 'package:jiitak_ui_assignment/modules/pages/stamp_detail/widget/top_bar.dart';
 import 'package:jiitak_ui_assignment/utils/customized_sized_box.dart';
@@ -23,7 +24,7 @@ class StampDetailPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Mer キッチン",
+                  CustomText("Mer キッチン",
                       style: TextStyle(
                         color: Color(0xffFFFFFF),
                         fontSize: 16,
@@ -115,7 +116,7 @@ class StampDetailPage extends StatelessWidget {
                       ),
                       Padding(
                         padding: const EdgeInsets.only(right: 30,),
-                        child: Text("2 / 2枚目",
+                        child: CustomText("2 / 2枚目",
                           style: TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.w400,
@@ -128,7 +129,7 @@ class StampDetailPage extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("スタンプ獲得履歴",
+                            CustomText("スタンプ獲得履歴",
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
@@ -175,7 +176,7 @@ class ListTileWidget extends StatelessWidget {
     return Column(
       children: [
         ListTile(
-          title: Text(headingText,
+          title: CustomText(headingText,
             style: TextStyle(
               color: Color(0xffB5B5B5),
               fontSize: 12,
@@ -185,14 +186,14 @@ class ListTileWidget extends StatelessWidget {
           subtitle: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(leadingText,
+              CustomText(leadingText,
                 style: TextStyle(
                   color: Color(0xff454545),
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
                 ),
               ),
-              Text(suffixText,
+              CustomText(suffixText,
                 style: TextStyle(
                   color: Color(0xff454545),
                   fontSize: 14,
