@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:jiitak_ui_assignment/common_widgets/custom_text_widget.dart';
 import 'package:jiitak_ui_assignment/utils/customized_sized_box.dart';
 
 class TimeSelection extends StatelessWidget {
@@ -19,7 +20,7 @@ class TimeSelection extends StatelessWidget {
         RichText(
             text: TextSpan(
                 text: headingText,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Color(0xff4B4948),
                   fontSize: 14,
                   fontWeight: FontWeight.w500,
@@ -27,7 +28,7 @@ class TimeSelection extends StatelessWidget {
                 children: const [
               TextSpan(
                 text: "*",
-                style: TextStyle(color: Color(0xffEB5308), fontWeight: FontWeight.bold),
+                style: TextStyle(color: Color(0xffEB5308), fontWeight: FontWeight.w500),
               ),
             ])),
         sboxH10,
@@ -36,28 +37,35 @@ class TimeSelection extends StatelessWidget {
           children: [
             Container(
               height: 38,
-              padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+              padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                border: Border.all(color: Color(0xffE8E8E8)),
+                border: Border.all(color: const Color(0xffE8E8E8)),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(startingText),
+                  CustomText(
+                    startingText,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      color: Color(0xff454545),
+                    ),
+                  ),
                   sboxW10,
                   svgImage1 != null
                       ? SvgPicture.asset(
                           svgImage1!,
-                          color: Color(0xffC7C4C0),
+                          color: const Color(0xffC7C4C0),
                         )
-                      : SizedBox.shrink(),
+                      : const SizedBox.shrink(),
                 ],
               ),
             ),
-            Text(
+            CustomText(
               "~",
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.w400,
                 color: Color(0xff4B4948),
@@ -65,22 +73,29 @@ class TimeSelection extends StatelessWidget {
             ),
             Container(
               height: 38,
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
-                border: Border.all(color: Color(0xffE8E8E8)),
+                border: Border.all(color: const Color(0xffE8E8E8)),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(endingText),
+                  Text(
+                    endingText,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      color: Color(0xff454545),
+                    ),
+                  ),
                   sboxW6,
                   svgImage2 != null
                       ? SvgPicture.asset(
                           svgImage2!,
-                          color: Color(0xffC7C4C0),
+                          color: const Color(0xffC7C4C0),
                         )
-                      : SizedBox.shrink(),
+                      : const SizedBox.shrink(),
                 ],
               ),
             ),

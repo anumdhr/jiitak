@@ -12,25 +12,25 @@ class CommonProductField extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         RichText(
-            text: TextSpan(text: "店舗外観", style: TextStyle(
+            text: const TextSpan(text: "店舗外観", style: TextStyle(
               color: Color(0xff4B4948),
               fontSize: 14,
               fontWeight: FontWeight.w500,
-            ), children: const [
+            ), children: [
               TextSpan(
                 text: "*",
-                style: TextStyle(color: Color(0xffEB5308),fontSize: 14, fontWeight: FontWeight.bold),
+                style: TextStyle(color: Color(0xffEB5308),fontSize: 14, fontWeight: FontWeight.w500),
               ),
               TextSpan(
-                text: " (最大3枚まで）",
-                style: TextStyle(color: Color(0xff9C9896),fontWeight: FontWeight.bold),
+                text: " (1枚〜3枚ずつ追加してください）",
+                style: TextStyle(color: Color(0xff9C9896),fontWeight: FontWeight.w400),
               ),
             ])),
         sboxH10,
         Container(
           height: 91,
           child: ListView.separated(
-            separatorBuilder: (context, index) => SizedBox(
+            separatorBuilder: (context, index) => const SizedBox(
               width: 10,
             ),
             scrollDirection: Axis.horizontal,
@@ -54,7 +54,7 @@ class CommonProductField extends StatelessWidget {
                       top: 10,
                       right:20,
                       child: SvgPicture.asset(
-                        color: Color(0xffE8E8E8),
+                        color: const Color(0xffE8E8E8),
                         "assets/images/cross.svg",
                       ),
                     ),

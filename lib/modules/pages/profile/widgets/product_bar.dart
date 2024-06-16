@@ -20,11 +20,11 @@ class ProductBar extends StatelessWidget {
             ), children: const [
           TextSpan(
             text: "*",
-            style: TextStyle(color: Color(0xffEB5308),fontSize: 14, fontWeight: FontWeight.bold),
+            style: TextStyle(color: Color(0xffEB5308),fontSize: 14, fontWeight: FontWeight.w500),
           ),
           TextSpan(
             text: " (最大3枚まで）",
-            style: TextStyle(color: Color(0xff9C9896),fontWeight: FontWeight.bold),
+            style: TextStyle(color: Color(0xff9C9896),fontWeight: FontWeight.w400),
           ),
         ])),
         sboxH10,

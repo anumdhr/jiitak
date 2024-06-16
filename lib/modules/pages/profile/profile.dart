@@ -4,6 +4,7 @@ import 'package:jiitak_ui_assignment/common_widgets/custom_text_field.dart';
 import 'package:jiitak_ui_assignment/modules/pages/profile/common/common_product.dart';
 import 'package:jiitak_ui_assignment/modules/pages/profile/widgets/category_dropdown.dart';
 import 'package:jiitak_ui_assignment/modules/pages/profile/widgets/product_bar.dart';
+import 'package:jiitak_ui_assignment/modules/pages/profile/widgets/regular_closing_day.dart';
 import 'package:jiitak_ui_assignment/modules/pages/profile/widgets/time_selection.dart';
 import 'package:jiitak_ui_assignment/modules/pages/profile/widgets/top_bar.dart';
 import 'package:jiitak_ui_assignment/utils/customized_sized_box.dart';
@@ -100,7 +101,7 @@ class ProfilePage extends StatelessWidget {
                     svgImage1: "assets/images/dropdown.svg",
                     svgImage2: "assets/images/dropdown.svg",
                   ),
-                  // RegularClosingDay(),
+                  // MultipleChooseBar(),
                   sboxH10,
                   const CategoryDropDown(),
                   sboxH10,
@@ -163,9 +164,9 @@ class ProfilePage extends StatelessWidget {
                                 ),
                                 width: 91,
                                 height: 91,
-                                child: SvgPicture.asset(
+                                child: Image.asset(
                                   images[index],
-                                  fit: BoxFit.cover,
+                                  fit: BoxFit.fill,
                                 )),
                             Positioned(
                               top: 10,

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jiitak_ui_assignment/common_widgets/custom_text_widget.dart';
 import 'package:jiitak_ui_assignment/modules/pages/stamp_detail/widget/text_field_with_bottom.dart';
-import 'package:jiitak_ui_assignment/modules/pages/stamp_detail/widget/top_bar.dart';
+import 'package:jiitak_ui_assignment/modules/pages/stamp_detail/widget/stamp_top_bar.dart';
 import 'package:jiitak_ui_assignment/utils/customized_sized_box.dart';
 
 class StampDetailPage extends StatelessWidget {

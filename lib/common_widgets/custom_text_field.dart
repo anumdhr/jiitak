@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jiitak_ui_assignment/utils/customized_sized_box.dart';
+
 class CustomTextField extends StatelessWidget {
   const CustomTextField({super.key, required this.headingText, required this.hintText});
 
@@ -19,7 +20,6 @@ class CustomTextField extends StatelessWidget {
             ),
           ]),
         ),
-        // Text("店舗名*"),
         sboxH10,
         SizedBox(
           height: 40,
