@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:jiitak_ui_assignment/common_widgets/custom_text_widget.dart';
 
 class TopBar extends StatelessWidget {
@@ -19,11 +21,14 @@ class TopBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CircleAvatar(
-            backgroundColor: const Color(0xff8C817B).withOpacity(0.10),
-            child: SvgPicture.asset(
-              "assets/images/icon.svg",
-              fit: BoxFit.cover,
+          GestureDetector(
+            onTap: () => Get.back(),
+            child: CircleAvatar(
+              backgroundColor: const Color(0xff8C817B).withOpacity(0.10),
+              child: SvgPicture.asset(
+                "assets/images/icon.svg",
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           CustomText(

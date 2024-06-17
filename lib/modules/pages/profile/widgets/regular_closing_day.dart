@@ -5,6 +5,8 @@ import 'package:jiitak_ui_assignment/modules/pages/profile/controller/check_box_
 import '../../../../common_widgets/custom_text_widget.dart';
 
 class MultipleChooseBar extends StatelessWidget {
+  MultipleChooseBar({super.key});
+
   final CheckboxController controller = Get.put(CheckboxController());
   final List<String> labels = [
     '月',
@@ -24,31 +26,27 @@ class MultipleChooseBar extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           RichText(
-              text: TextSpan(
+              text: const TextSpan(
                   text: "定休日",
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: Color(0xff4B4948),
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                   ),
-                  children: const [
-                    TextSpan(
-                      text: "*",
-                      style: TextStyle(color: Color(0xffEB5308), fontWeight: FontWeight.w500),
-                    ),
-                  ])),
-
+                  children: [
+                TextSpan(
+                  text: "*",
+                  style: TextStyle(color: Color(0xffEB5308), fontWeight: FontWeight.w500),
+                ),
+              ])),
           SizedBox(
             height: 60,
             child: GridView.builder(
-
-
               shrinkWrap: true,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 4,
                 // crossAxisSpacing: 1,
-                childAspectRatio: 2/1,
+                childAspectRatio: 2 / 1,
                 // mainAxisSpacing: 8,
               ),
               itemCount: controller.checkboxes.length,
@@ -57,20 +55,20 @@ class MultipleChooseBar extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Checkbox(
-                      side: BorderSide(
+                      side: const BorderSide(
                         color: Color(0xffE8E8E8),
                         width: 1.5,
                       ),
-                      focusColor: Color(0xffEE7D42),
-                      activeColor: Color(0xffEE7D42),
-
+                      focusColor: const Color(0xffEE7D42),
+                      activeColor: const Color(0xffEE7D42),
                       value: controller.checkboxes[index],
                       onChanged: (value) {
                         controller.toggleCheckbox(index);
                       },
                     ),
-                    CustomText(labels[index],
-                      style: TextStyle(
+                    CustomText(
+                      labels[index],
+                      style: const TextStyle(
                         color: Color(0xff4B4948),
                         fontSize: 16,
                         fontWeight: FontWeight.w400,

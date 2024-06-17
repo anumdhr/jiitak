@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:jiitak_ui_assignment/common_widgets/custom_text_widget.dart';
 
 class StampTopBar extends StatelessWidget {
@@ -15,13 +17,16 @@ class StampTopBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CircleAvatar(
-            radius: 25,
-            backgroundColor: const Color(0xff949EFF),
-            child: SvgPicture.asset(
-              "assets/images/icon.svg",
-              fit: BoxFit.cover,
-              color: Colors.white,
+          GestureDetector(
+            onTap: () => Get.back(),
+            child: CircleAvatar(
+              radius: 25,
+              backgroundColor: const Color(0xff949EFF),
+              child: SvgPicture.asset(
+                "assets/images/icon.svg",
+                fit: BoxFit.cover,
+                color: Colors.white,
+              ),
             ),
           ),
           CustomText(
