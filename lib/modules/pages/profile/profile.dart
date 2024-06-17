@@ -101,7 +101,11 @@ class ProfilePage extends StatelessWidget {
                     svgImage1: "assets/images/dropdown.svg",
                     svgImage2: "assets/images/dropdown.svg",
                   ),
-                  // MultipleChooseBar(),
+                  sboxH10,
+                  SizedBox(
+                    height: 90,
+                    child: MultipleChooseBar(),
+                  ),
                   sboxH10,
                   const CategoryDropDown(),
                   sboxH10,
@@ -114,7 +118,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Column(
                 children: [
                   sboxH10,
@@ -190,13 +194,10 @@ class ProfilePage extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 20),
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
-                      gradient: const LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          colors: [
-                            Color(0xffEE7D42),
-                            Color(0xffFFC8AB),
-                          ]),
+                      gradient: const LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [
+                        Color(0xffEE7D42),
+                        Color(0xffFFC8AB),
+                      ]),
                       borderRadius: BorderRadius.circular(5),
                       color: const Color(0xffE8E8E8),
                     ),
